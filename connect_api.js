@@ -16,4 +16,5 @@ getData().then(response => {
         
         console.log(year, temp)
     })
-})
+}).catch(error => console.log(error))
+
