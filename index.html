@@ -15,15 +15,15 @@
 </head>
 <body>
 <nav>
-    <img src="img/nasa-logo-green.svg" alt="">
+    <img src="/img/nasa-logo-green.svg" alt="">
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Data</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#graph">Data</a></li>
     </ul>
 </nav>
 
 
-<section class="section-1">
+<section class="section1" id="home">
     <div class="sec-1">
         <img src="/img/earthView-green.svg" alt="earth-View-green">
         <div class="txt">
@@ -41,7 +41,67 @@
         </div>
     </div>
 </section>
+<section class="section2">
+    <div class="sec2">
+        <div class="col-1">
+            <h2>
+                This directory contains the <span>basic data</span> file that are used to create the various maps of temperature anomalies or trends:
+            </h2>
+            <p>
+                Get the current estimate of  global surface temperature change data 
+            </p>
+            <div class="btn">
+                <button>
+                    View Data
+                </button>
+            </div>
+        </div>
+        <div class="col-2">
+           <div class="chart" id="graph">
+            <canvas id="chart" width="676" height="400"></canvas>
+           </div>
+        </div>
+    </div>
+</section>
 
 
+<script>
+    const xlabels = [];
+    const yTemps = [];
+    // getData();
+    chartIt();
+
+async function chartIt(){
+        await getData();
+
+        const ctx = document.getElementById('chart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: xlabels,
+                    datasets: [{
+                        label: 'Global Average Temperature',
+                        data: yTemps,
+                        backgroundColor: [
+                            'rgba(215, 199, 132, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgb(255, 255, 255)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+            
+    });
+
+}
+    </script>
 </body>
 </html>
