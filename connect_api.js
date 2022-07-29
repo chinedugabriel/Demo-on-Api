@@ -11,30 +11,13 @@ const getData = async () => {
             xlabels.push(year);
     
             let temp =columns[1];
-            yTemps.push(temp);
+            yTemps.push(parseFloat(temp) + 14);
     
             console.log(year, temp)
         })
 
     
 };
-
-// getData().then(response => {
-//     // console.log(response)
-//     // console.log(table)
-//      table.forEach(row=>{
-
-//         let columns = row.split(',')
-//         let year = columns[0];
-//         xlabels.push(year);
-
-//         let temp =columns[1];
-//         yTemps.push(temp);
-
-//         console.log(year, temp)
-//     })
-// }).catch(error => console.log(error))
-
 
 
 // let getData = async ()=> {
