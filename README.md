@@ -1,11 +1,11 @@
 
 # Global Average Temperature
 
-This document is an outline for working with data, APIs in Javascript using a csv file from Nasa showing the worlds average temprature recorded from 1951-1980
+This document is an outline for working with data, APIs in Javascript using a csv file from Nasa showing the worlds average temperature recorded from 1951-1980
 , and how to work with csv file, representing the data in a graph form in Javascript.
 ## Technologies Used
 
-**Tech:** HTML, CSS, JAVASCRIPT, Chart.js
+**Tech:** HTML, CSS, JAVASCRIPT, Animate.css Chart.js
 
 
 
@@ -34,4 +34,4 @@ This document is an outline for working with data, APIs in Javascript using a cs
 
 ## Lessons Learned
 
-i Learnt how to wprk with CSV file and converting the data from the file into a graph (graphical representation of what the data is)
+i Learnt how to work with CSV file and converting the data from the file into a graph (graphical representation of what the data is)
