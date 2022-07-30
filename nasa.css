@@ -36,6 +36,10 @@ nav>ul{
     justify-content: space-evenly;
     gap: 20px;
 }
+nav>ul>li{
+    padding-bottom: 10px;
+    cursor: pointer;
+}
 
 nav>ul>li>a{
     font-style: normal;
@@ -122,12 +126,12 @@ section>div.sec-1 div.btn{
     /* border: 1px solid rgb(4, 1, 211); */
 
 }
-section>div.sec-1 button{
+ button{
     background-color: transparent;
     color: #48BB4F;
     font-size: 24px;
     height: 56px;
-    width: 246px;
+    width: 200px;
     border: 2px solid #48BB4F;
     border-radius: 15px
 
@@ -177,7 +181,7 @@ section.section2>div.sec2>div.col-1{
 section.section2div.sec2>div.col-2{
     border: 2px solid rgb(194, 9, 154);
     /* width: 50%; */
-    /* flex: 1; */
+    /* flex-basis: 1; */
     /* height: 1000px;
     width: 500px; */
     align-self: center;
@@ -212,7 +216,7 @@ section.section2>div.btn button{
     max-height: 100%;
 }
 
-section.section2 button{
+/* section.section2 button{
     background-color: transparent;
     color: #48BB4F;
     font-size: 24px;
@@ -220,15 +224,13 @@ section.section2 button{
     max-width: 246px;
     border: 2px solid #48BB4F;
     border-radius: 15px;
-    /* align-self:flex-start; */
 
-
-}
+} */
 
 div.chart{
-    background-color:#203734; 
+    /* background-color:#203734;  */
     max-height: 576px; 
-    max-width: 900px;
+    max-width: 150%;
     padding: 10px;
 }
 #chart{
