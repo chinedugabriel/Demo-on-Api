@@ -61,6 +61,7 @@ section.section1{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    gap: 25px;
 }
 section>div.sec-1{
     display: flex;
