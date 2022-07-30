@@ -21,6 +21,7 @@ nav{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
     /* position: sticky; */
 }
 nav img{
@@ -51,6 +52,7 @@ nav>ul>li:first-child{
 section.section1{
     /* width: 100%; */
     /* border: 2px solid #FC3D21; */
+    height: 45rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -82,6 +84,7 @@ section>div.sec-1 div.txt{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
+    gap: 20px;
     /* align-content: flex-end; */
     /* border: 1px solid blueviolet; */
 
@@ -100,13 +103,14 @@ section>div.sec-1 h1{
     line-height: 48px;
 
 }
-section>div.sec-1 p{
+/* section>div.sec-1 p{
     font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
+    font-weight: 300px;
+    font-size: 20px;
     line-height: 29px;
     max-width: 611px;
-}
+    color: #203734;
+} */
 
 section>div.sec-1 div.btn{
     height: 20%;
@@ -166,7 +170,7 @@ section.section2>div.sec2>div.col-1{
     flex-flow: column nowrap;
     justify-content: space-between;
     align-content: flex-start;
-    padding: 0px 0px;
+    padding: 0px 10px;
     gap: 20px;
 
 }
@@ -184,15 +188,15 @@ section.section2div.sec2>div.col-2{
 section.section2 h2{
     font-style: normal;
     font-weight: 300;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 27px;
+    /* line-height: 48px; */
     max-width: 520px;
-    height: 200px;
+    height: auto;
     margin: 0px;
     /* border: 2px solid rgb(66, 160, 12); */
 
 }
-section.section2 p{
+p{
     margin: 0px;
     /* border: 2px solid rgb(66, 160, 12); */
     max-width: 500px;
@@ -201,7 +205,6 @@ section.section2 p{
     font-weight: 300;
     font-size: 20px;
     line-height: 29px;
-
     color: #203734;
 }
 section.section2>div.btn button{
@@ -226,6 +229,7 @@ div.chart{
     background-color:#203734; 
     max-height: 576px; 
     max-width: 900px;
+    padding: 10px;
 }
 #chart{
     max-width: 676px; 
