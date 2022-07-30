@@ -15,7 +15,7 @@
 </head>
 <body>
 <nav>
-    <img src="/img/nasa-logo-green.svg" alt="">
+    <img src="/img/nasa-logo-green.png" alt="">
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#graph">Data</a></li>
@@ -25,12 +25,13 @@
 
 <section class="section1" id="home">
     <div class="sec-1">
-        <img src="/img/earthView-green.svg" alt="earth-View-green">
+        <img src="/img/earthView-green.png" alt="earth-View-green">
         <div class="txt">
             <h1>
                 <span>National</span> Aeronautics and Space Administration
             </h1>
             <P>
+                Study of past climate change on Earth and of other planetary atmospheres serves as a useful tool in assessing our general understanding of the atmosphere and its evolution.
                 Get the current estimate of global surface temperature change data
             </P>
             <div class="btn">
@@ -44,10 +45,11 @@
 <section class="section2">
     <div class="sec2">
         <div class="col-1">
-            <h2>
+            <h3>
                 This directory contains the <span>basic data</span> file that are used to create the various maps of temperature anomalies or trends:
-            </h2>
+            </h3>
             <p>
+                The research combines analysis of comprehensive global datasets with global models of atmospheric, land surface, and oceanic processes.
                 Get the current estimate of  global surface temperature change data 
             </p>
             <div class="btn">
@@ -76,7 +78,7 @@ async function chartIt(){
 
         const ctx = document.getElementById('chart').getContext('2d');
             const myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: xlabels,
                     datasets: [{
