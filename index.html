@@ -66,12 +66,40 @@
     </div>
 </section>
 
+<section class="section3">
+    <div class="sec2">
+        <div class="col-2">
+            <div class="chart" id="graph">
+             <canvas id="chart2" width="676" height="400"></canvas>
+            </div>
+         </div>
+        <div class="col-1">
+            <h2>
+                This directory contains the <span>basic data</span> file that are used to create the various maps of temperature anomalies or trends:
+            </h2>
+            <p>
+                The research combines analysis of comprehensive global datasets with global models of atmospheric, land surface, and oceanic processes.
+                Get the current estimate of  global surface temperature change data 
+            </p>
+            <div class="btn">
+                <button>
+                    View Data
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
 <script>
     const xlabels = [];
     const yTemps = [];
+    const xlabelsFs = [];
+    const yTempsFs = [];
     // getData();
     chartIt();
+    barChartIt();
 
 async function chartIt(){
         await getData();
@@ -84,6 +112,38 @@ async function chartIt(){
                     datasets: [{
                         label: 'Global Average Temperature',
                         data: yTemps,
+                        backgroundColor: [
+                            'rgba(215, 199, 132, 0.2)'
+                        ],
+                        borderColor: [
+                            '#203734'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+            
+    });
+
+}
+
+async function barChartIt(){
+        await getSecondData();
+
+        const ctx = document.getElementById('chart2').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: xlabelsFs,
+                    datasets: [{
+                        label: 'Global Average Temperature',
+                        data: yTempsFs,
                         backgroundColor: [
                             'rgba(215, 199, 132, 0.2)'
                         ],

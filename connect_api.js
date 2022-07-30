@@ -19,6 +19,27 @@ const getData = async () => {
     
 };
 
+const getSecondData = async () => {
+    let request = await fetch('ZonAnn.Ts+dSST.csv');
+
+        let response = await request.text();
+        let table = response.split('\n').slice(1);
+
+        table.forEach(row=>{
+
+            let columns = row.split(',')
+            let year = columns[0];
+            xlabelsFs.push(year);
+    
+            let temp =columns[1];
+            yTempsFs.push(parseFloat(temp) + 14);
+    
+            console.log(year, temp)
+        })
+
+    
+};
+
 
 // let getData = async ()=> {
 //     let request = await fetch("test.csv");
